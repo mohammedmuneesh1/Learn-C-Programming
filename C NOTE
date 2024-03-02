@@ -1,0 +1,37 @@
+
+<-----------------  snprintf Start--------------------------------------------------------->
+
+snprintf()
+
+snprintf is a function from c standard library (stdio.h) that write formatted output to a string.
+The first argument is where you want to store the output. In this case, since we want to calculate the length of the string but
+ don't want to actually store it anywhere, we pass NULL.
+  Passing NULL tells snprintf not to write anything, but just calculate the length that would have been written if it had a buffer large enough.
+The second argument specifies the size of the buffer. Since we're not providing a buffer (because we passed NULL in the first argument), this argument is set to 0.
+The third argument is the format string, similar to printf. Here "%d" specifies that we want to format an integer.
+Finally, number is the integer we want to convert to a string and calculate the length of.
+So, snprintf(NULL, 0, "%d", number) calculates the length of the string that would have been written if the buffer size were large enough to hold it, without actually writing anything. It returns the number of characters (excluding the null terminator) that would have been written to 
+
+int num_digits = snprintf(NULL, 0, "%d", number)              ;---> this code will return the length of the integer;
+
+ // Convert the integer to a string
+    sprintf(str, "%d", number);
+
+    576 integer to "576" string ;
+    find the length of the string  int length = strlen(str);
+
+     strlen() function from the <string.h> 
+
+<-----------------  snprintf End  --------------------------------------------------------->
+
+<------------------ POINTER Start --------------------------------------------------------->
+
+
+ It doesn't hold the actual data; instead, it holds the address of where the data is stored in memory.
+
+int num = 10; // Define an integer variable 'num' and assign it the value 10
+int *ptr;     // Declare a pointer variable 'ptr' that can store the address of an integer  
+ptr = &num;   // Assign the address of 'num' to the pointer variable 'ptr'
+
+<------------------ POINTER End --------------------------------------------------------->
+    
